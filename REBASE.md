@@ -4,6 +4,7 @@
 
 In software development, managing commits is essential for maintaining a clean and coherent project history. Git offers various tools to manage commits, including rebasing, which allows you to reapply commits on top of another branch's history. Let's explore how to rebase commits effectively.
 
+
 ## Setup
 
 - Create a branch called `feature-branch`.
