@@ -1,10 +1,14 @@
 # Miscellaneous
 
-There some things that are good to know, but not strictly necessary. Here's an (incompplete) list of the ideas. Please feel free to add any 'life hacks' you know/discover to this!
+There some things that are good to know, but not strictly necessary. Here's an (incomplete) list of the ideas. Please feel free to add any 'life hacks' you know/discover to this!
 
 ## Clone depth
 
-In old repos, there's ususally a lot of history. So, cloning them often takes many GBs, while the actual code you'd like to download(to, for example, browse around) is only a few dozen MBs. To get around this, we can use `git clone --depth 1`. For example, `git clone --depth 1 git@github.com:pytorch/pytorch.git` takes significantly less time than cloning the entire repo.
+In old repos, there's usually a lot of history. So, cloning them often takes many GBs, while the actual code you'd like to download(to, for example, browse around) is only a few dozen MBs. To get around this, we can use `git clone --depth 1`.
+The `--depth 1` option makes cloning faster by downloading only the latest version of the code instead of the whole history.
+
+ For example,
+ `git clone --depth 1 https://github.com/iiitl/git-practice-weekend-2025.git ` takes significantly less time than cloning the entire repo.
 
 ## Aliases
 
@@ -14,7 +18,11 @@ There are some commands that we use all the time(for example, `git status`). To 
 git config --global alias.s status
 ```
 
-You can replace `s` with anything other alias. The `--global` flag tells git that we want this setting to be applied everywhere.
+You can replace `s` with anything other alias.
+git config --global alias.co checkout 
+git config --global alias.br branch  
+
+ The `--global` flag tells git that we want this setting to be applied everywhere.
 
 ## gitconfig
 
@@ -27,6 +35,9 @@ git config --global help.autoCorrect 50
 This will autocorrect your commands(for example, from `git rebaes` to `git rebase`) in 5 seconds and run it.
 
 Some other common options are(thanks @Animeshz for these):
+
+git config --global color.ui auto  
+git config --global pull.rebase false
 
 ```bash
 git config --global user.email <email> # set your default commit email
